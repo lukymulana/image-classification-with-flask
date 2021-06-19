@@ -1,1 +1,1 @@
-# image-clasification-with-flask
+# Trash ClasSification With Flask
