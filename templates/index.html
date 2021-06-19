@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Clasification</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/stylesheet.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/responsive.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/awesome.min.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  </head>
+  <body>
+      <div class="top-wrapper1" id="home">
+        <div class="container">
+          <h1>Image Classification</h1>
+          <p>Upload a picture of your trash and let's see if your trash is organic or recyclable</p>
+          <div class="tombol-wrapper">
+            <a href="#" data-toggle="modal" data-target="#exampleModalCenter"><span class="tombol message">Upload Image</span></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Upload Image</h5>
+            </div>
+            <form action="/result" method="post" enctype="multipart/form-data">
+              <div class="form-group">
+                <div class="modal-body">
+                  <input type="file" name="file1" class="form-control-file" id="exampleFormControlFile1">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="submit" class="btn btn-primary">Process</button>
+                </div>
+            </div>
+          </form>
+          </div>
+        </div>
+      </div>
+    <!-- <footer>
+        <div class="footer-logo">
+          <a href="index.html"><img src="{{ url_for('static', filename= 'images/logo.png') }}"></a>
+        </div>
+        <div class="list">
+          <div class="footer-list">
+            <h3>FOLLOW US</h3>
+            <ul>
+              <li>Instagram</li>
+              <li>Twitter</li>
+              <li>Facebook</li>
+            </ul>
+          </div>
+          <div class="footer-list">
+            <h3>SUPPORT</h3>
+            <ul>
+              <li>About GetLoc</li>
+              <li>Terms</li>
+              <li>Privacy Policy</li>
+            </ul>
+          </div>
+        </div>
+    </footer> -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+  </body>
+</html>
